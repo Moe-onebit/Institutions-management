@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "830062443534",
+    "project_id": "institutions-management",
+    "storage_bucket": "institutions-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830062443534:android:c68b9436f077820a6d505f",
+        "android_client_info": {
+          "package_name": "com.example.demo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830062443534-up5a0umim2tlif8dde2g3fejkr7qtd6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demo_app",
+            "certificate_hash": "96068eccec4746c0dde72c594b52bb76fe82f6dc"
+          }
+        },
+        {
+          "client_id": "830062443534-bfihkg5utk7u0gltb550135ahsscofnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRdykIZn2ZChcHkVMiNiAx-2wlRfwh7W8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830062443534-bfihkg5utk7u0gltb550135ahsscofnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
