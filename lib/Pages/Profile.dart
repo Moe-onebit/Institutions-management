@@ -1,3 +1,4 @@
+import 'package:demo_app/Pages/SettingForm/PayingForm.dart';
 import 'package:flutter/material.dart';
 
 import 'SettingForm/SettingsForm.dart';
@@ -16,6 +17,18 @@ class _ProfileState extends State<Profile> {
           return Container(
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
             child: SettingsForm(),
+          );
+        });
+  }
+
+  void _showPaymentPanel() {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context,
+        builder: (context){
+          return Container(
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+            child: PayingForm(),
           );
         });
   }
@@ -88,6 +101,16 @@ class _ProfileState extends State<Profile> {
             onTap: _showSettingsPanel,
             child: Text(
               'Edit Profile',
+              style: TextStyle(
+                  color: Colors.grey[400], fontSize: 18, fontFamily: 'Cabin'),
+            ),
+          ),
+
+          //Clickable text
+          GestureDetector(
+            onTap: _showPaymentPanel,
+            child: Text(
+              'Fill your points',
               style: TextStyle(
                   color: Colors.grey[400], fontSize: 18, fontFamily: 'Cabin'),
             ),
