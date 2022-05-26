@@ -1,8 +1,8 @@
 import 'package:demo_app/Customs/Custom_Font.dart';
 import 'package:demo_app/Customs/Custom_Raised_Button.dart';
 import 'package:demo_app/Customs/InputField.dart';
+import 'package:demo_app/Pages/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/Pages/Profile.dart';
 import 'package:get/get.dart';
 
 class SettingsForm extends StatefulWidget {
@@ -95,7 +95,7 @@ class _SettingsFormState extends State<SettingsForm> {
                 textColor: Colors.grey.shade200,
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
-                function: () => Get.offAll(Profile()),
+                function: () => Get.offAll(HomePage()),
               )
             ],
           ),

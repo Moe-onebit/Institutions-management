@@ -1,10 +1,10 @@
 import 'package:demo_app/Customs/Custom_Font.dart';
 import 'package:demo_app/Customs/Custom_Raised_Button.dart';
 import 'package:demo_app/Customs/InputField.dart';
+import 'package:demo_app/Pages/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/Pages/Profile.dart';
 import 'package:get/get.dart';
-
+import 'package:file_picker/file_picker.dart';
 
 class PayingForm extends StatefulWidget {
   @override
@@ -61,20 +61,23 @@ class _PayingFormState extends State<PayingForm> {
                   autoCorrect: true,
                   textInputAction: TextInputAction.next,
                 ),
-                // CustomRaisedButton(
-                //   width: 200 ,
-                //   height: 50.0,
-                //   margin: const EdgeInsets.symmetric(horizontal: 50),
-                //   color: Colors.teal.shade500,
-                //   borderRadius: BorderRadius.circular(10),
-                //   text: "Upload",
-                //   textColor: Colors.grey.shade200,
-                //   fontSize: 17,
-                //   fontWeight: FontWeight.bold,
-                //   function: _uploadFile
-                // ),
                 SizedBox(
-                  height: 40,
+                  height: 20,
+                ),
+                CustomRaisedButton(
+                  width: 200 ,
+                  height: 50.0,
+                  margin: const EdgeInsets.symmetric(horizontal: 50),
+                  color: Colors.teal.shade500,
+                  borderRadius: BorderRadius.circular(10),
+                  text: "Upload",
+                  textColor: Colors.grey.shade200,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  function: _uploadFile
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 CustomRaisedButton(
                   width: 200 ,
@@ -86,7 +89,7 @@ class _PayingFormState extends State<PayingForm> {
                   textColor: Colors.grey.shade200,
                   fontSize: 17,
                   fontWeight: FontWeight.bold,
-                  function: () => Get.offAll(Profile()),
+                  function: () => Get.offAll(HomePage()),
                 ),
               ],
             ),
@@ -95,8 +98,12 @@ class _PayingFormState extends State<PayingForm> {
     );
   }
 
-  // Future _uploadFile() async{
-  //   final result = await FilePicker.platform.pickFiles();
-  // }
+  Future _uploadFile() async{
+    final result = await FilePicker.platform.pickFiles();
+    if(result == null){
+    return;
+    }
+    final file = result.files.first;
+  }
 
 }
